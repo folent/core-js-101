@@ -118,7 +118,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  *   (0,1) (1,2)     => 0
  */
-function getAngleBetweenVectors(x1, y1, x2, y2){
+function getAngleBetweenVectors(x1, y1, x2, y2) {
   return Math.acos((x1 * x2 + y1 * y2)
   / (Math.sqrt(x1 * x1 + y1 * y1) * Math.sqrt(x2 * x2 + y2 * y2)));
 }
@@ -170,7 +170,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a, b, c) {
-  const result = (a*a)+(b*b)+(c*c);
+  const result = (a * a) + (b * b) + (c * c);
   return Math.sqrt(result);
 }
 
@@ -214,7 +214,7 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  return n % 2 == 0 ? false : true;
+  return n % 2 === 0 ? false : true;
 }
 
 /**

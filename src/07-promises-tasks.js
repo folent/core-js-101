@@ -83,7 +83,7 @@ function processAllPromises(array) {
  */
 function getFastestPromise(array) {
   return Promise.race(array)
-  .then((data) => data);
+    .then((data) => data);
 }
 
 /**
