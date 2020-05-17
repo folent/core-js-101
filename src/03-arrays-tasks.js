@@ -38,7 +38,7 @@ function findElement(arr, value) {
 function generateOdds(len) {
   let res = 1;
   const arr = [1];
-  for (let i = 1; i < len; i++) {
+  for (let i = 1; i < len; i += 1) {
     res += 2;
     arr.push(res);
   }
@@ -260,13 +260,7 @@ function getMovingSum(arr) {
  * [ "a" ] => []
  */
 function getSecondItems(arr) {
-  const newArr = [];
-  for (let i = 1; i < arr.length; i++) {
-    if (i % 2 !== 0) {
-      newArr.push(arr[i]);
-    }
-  }
-  return newArr;
+  return arr.filter((element, index) => index % 2 !== 0);
 }
 
 
@@ -321,13 +315,7 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(arr) {
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0 && typeof arr[i] === 'number') {
-      count++;
-    }
-  }
-  return count;
+  return arr.filter((element) => typeof element === 'number' && element > 0).length;
 }
 
 /**
@@ -508,7 +496,7 @@ function getIdentityMatrix(n) {
 function getIntervalArray(start, end) {
   const arr = [];
   let i = start;
-  for (i; start <= end; i++) {
+  for (i; start <= end; i += 1) {
     arr.push(i);
   }
   return arr;

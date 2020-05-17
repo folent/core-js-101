@@ -112,8 +112,8 @@ function removeLeadingAndTrailingWhitespaces(value) {
  */
 function repeatString(value, count) {
   let str = '';
-  for (let i = 0; i < count; i++) {
-    str = str + value;
+  for (let i = 0; i < count; i += 1) {
+    str += value;
   }
   return str;
 }
@@ -245,7 +245,7 @@ function encodeToRot13(/* str */) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  return typeof value === 'string' ? true : false;
+  return typeof value === 'string';
 }
 
 
